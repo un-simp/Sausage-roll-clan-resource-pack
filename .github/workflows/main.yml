@@ -1,6 +1,10 @@
 name: Zip Files
 
-on: [push]
+on: 
+  push:
+  create:
+     tags:
+      - v*
 
 
 jobs:
