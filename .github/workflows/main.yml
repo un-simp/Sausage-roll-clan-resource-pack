@@ -17,3 +17,8 @@ jobs:
         with:
           name: Sausage
           path: ${{ github.workspace }}/result.zip
+      - name: Upload Release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "sausage.zip"
+          token: ${{ secrets.GITHUB_TOKEN }}
