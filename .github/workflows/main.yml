@@ -21,6 +21,6 @@ jobs:
           dest: result.zip
       - uses: actions/upload-artifact@v1
         with:
-          name: Sausage
+          name: result.zip
           path: ${{ github.workspace }}/result.zip
 
