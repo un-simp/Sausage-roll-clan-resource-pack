@@ -20,5 +20,5 @@ jobs:
       - name: Upload Release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "sausage.zip"
+          artifacts: "Sausage.zip"
           token: ${{ secrets.GITHUB_TOKEN }}
