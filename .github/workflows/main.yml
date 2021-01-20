@@ -1,15 +1,12 @@
- name: Zip Release
-  # You may pin to the exact commit or the version.
-  # uses: TheDoctor0/zip-release@a1afcab9c664c9976ac398fa831eac67bed1eb0e
-  uses: TheDoctor0/zip-release@0.4.1
-  with:
-    # Filename for archive
-    filename: Sausage.zip
-    # Base path for archive files
-    path: # optional, default is .
-    # Working directory before zipping
-    directory: # optional, default is .
-    # List of excluded files / directories
-    exclusions: LICENSE,.github
-    # Tool to use for archiving
-    type: # optional, default is zip
+name: Create Archive
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Archive Release
+      uses: thedoctor0/zip-release@master
+      with:
+        filename: 'release.zip'
+        exclusions: '*.github* /*LICENSE* .editorconfig'
