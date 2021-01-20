@@ -21,6 +21,6 @@ jobs:
           dest: result.zip
       - uses: actions/upload-artifact@v1
         with:
-          name: result.zip
+          name: extract-result.zip-to-%appdata%.minecraft/resourcepacks.zip
           path: ${{ github.workspace }}/result.zip
 
